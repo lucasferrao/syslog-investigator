@@ -4,10 +4,6 @@
 
 Lightweight Python-based tool designed to parse and analyze Linux system authentication logs. Its primary objective is to assist cybersecurity analysts and SOC professionals in detecting suspicious activities such unauthorized login attempts.
 
-## Table of Contents
-
-  - [Key Features]{#Key Features:}
-
 
 ## Key Features:
 
@@ -32,7 +28,6 @@ Lightweight Python-based tool designed to parse and analyze Linux system authent
 
 
 ## Intallation:
-
 1. Clone the repository:
 
   - git clone https://github.com/lucasferrao/syslog-investigator.git
@@ -58,3 +53,8 @@ Lightweight Python-based tool designed to parse and analyze Linux system authent
 
 ## Testing
   - python -m unittest discover tests
+
+
+## Authors
+- [@lucasferrao](https://www.github.com/lucasferrao)
+- [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucasferrao)
