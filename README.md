@@ -2,31 +2,69 @@
 
 ## Overview:
 
-Lightweight Python-based tool designed to parse and analyze Linux system authentication logs. Its primary objective is to assist cybersecurity analysts and SOC professionals in detecting suspicious activities such as brute-force attacks and unauthorized login attempts.
+Lightweight Python-based tool designed to parse and analyze Linux system authentication logs. Its primary objective is to assist cybersecurity analysts and SOC professionals in detecting suspicious activities such unauthorized login attempts.
+
 
 ## Key Features:
 
   - Extracts failed login attempts from system logs;
   - Aggregates source IPs and usernames involved in repeated failures;
-  - Generates a concise summary report for further investigation.
+  - Generates detailed reports in both text and JSON formats;
+  - Provides a web dashboard to visualize all entries and alerts.
+
 
 ## Technologies:
 
   - Python 3.x;
-  - Regular Expressions;
-  - File I/O.
+  - Flask Web Framework;
+  - Regex;
+  - JSON;
+  - HTML.
+
 
 ## Project Structure:
 
-  - `src/` – contains the log parsing script;
-  - `logs/` – sample log files for testing;
-  - `reports/` – generated analysis reports.
+syslog-investigator/
+├── app.py                    # Flask application and report visualization
+├── src/
+│   └── log_parser.py         # Log parsing and report generation script
+├── logs/
+│   └── sample_auth.log       # Sample SSH authentication log file
+├── reports/
+│   ├── example_report.txt    # Generated textual report
+│   └── example_report.json   # Generated JSON report
+├── templates/
+│   ├── report.html           # Main dashboard HTML template
+├── tests/
+│   └── test_log_parser.py    # Unit tests for log parsing
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
 
-## Requirements:
 
-All dependencies are listed in `requirements.txt`. This project uses only standard Python libraries.
+## Intallation:
 
-## Getting Started:
+1. Clone the repository:
 
-```bash
-python3 src/log_parser.py --log logs/sample_auth.log --output reports/example_report.txt
+  - git clone https://github.com/your-username/syslog-investigator.git
+  - cd syslog-investigator
+    
+2. Create and activate a virtual environment:
+   - python3 -m venv venv
+   - source venv/bin/activate        # Linux/macOS
+   - venv\Scripts\activate.bat       # Windows
+
+3. Install required packages:
+   - pip install -r requirements.txt
+
+4. Run the application:
+   - python app.py
+
+
+## Web Dashboard
+  - Alerts Table: Lists all IP/user entries with failed attempts exceeding the alert threshold;
+  - All Entries Table: Displays every parsed failed login attempt with details;
+  - This interface enables cybersecurity analysts to quickly identify and investigate suspicious authentication activity.
+
+
+## Testing
+  - python -m unittest discover tests
