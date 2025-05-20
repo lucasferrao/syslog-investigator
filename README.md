@@ -41,7 +41,7 @@ cd syslog-investigator
    - source venv/bin/activate        # Linux/macOS
    - venv\Scripts\activate.bat       # Windows
 
-3. Install required packages:
+4. Install required packages:
 ```python
 pip install -r requirements.txt
 ```
