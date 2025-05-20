@@ -52,7 +52,14 @@ Lightweight Python-based tool designed to parse and analyze Linux system authent
 
 
 ## Testing
-  - python -m unittest discover tests
+```python
+  python -m unittest discover tests
+```
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
 
 
 ## Authors
