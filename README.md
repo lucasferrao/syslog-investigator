@@ -57,4 +57,7 @@ Lightweight Python-based tool designed to parse and analyze Linux system authent
 
 ## Authors
 - [@lucasferrao](https://www.github.com/lucasferrao)
+
+
+## Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucasferrao)
