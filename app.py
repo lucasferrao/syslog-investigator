@@ -1,7 +1,26 @@
 from flask import Flask, render_template
 import re
+import webbrowser
+import threading
 
 app = Flask(__name__)
+
+
+def generate_report():
+    cmd = [
+        "python3",
+        "src/log_parser.py",
+        "--log", "logs/sample_auth.log",
+        "--output", "reports/example_report.txt",
+        "--json", "reports/example_report.json",
+        "--threshold", "5"
+    ]
+    try:
+        subprocess.run(cmd, check=True)
+        print("[INFO] Report generated successfully.")
+    except subprocess.CalledProcessError as e:
+        print(f"[ERROR] Failed to generate report: {e}")
+
 
 def parse_report_file(report_path):
     entries = []
@@ -31,4 +50,5 @@ def index():
 
 
 if __name__ == "__main__":
+    threading.Timer(1.25, lambda: webbrowser.open("http://localhost:8080")).start()
     app.run(debug=True, host="0.0.0.0", port=8080)

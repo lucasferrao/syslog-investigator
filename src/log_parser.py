@@ -53,8 +53,9 @@ def generate_report(events, output_path, threshold):
         report.write("Suspicious Authentication Failures Report:\n")
         report.write("=" * 50 + "\n\n")
         for (ip, user), count in sorted(events.items(), key=lambda x: x[1], reverse=True):
-            alert = " ------------------------> [ALERT]" if count >= threshold else ""
+            alert = " [ALERT]" if count >= threshold else ""
             report.write(f"IP: {ip} | User: {user} | Failed Attempts: {count}{alert}\n")
+
 
 
 #Generating a JSON report of suspicious authentication failures.
