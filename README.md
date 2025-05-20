@@ -4,6 +4,10 @@
 
 Lightweight Python-based tool designed to parse and analyze Linux system authentication logs. Its primary objective is to assist cybersecurity analysts and SOC professionals in detecting suspicious activities such unauthorized login attempts.
 
+## Table of Contents
+
+  - [Key Features]{#Key Features:}
+
 
 ## Key Features:
 
