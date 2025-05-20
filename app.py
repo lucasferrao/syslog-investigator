@@ -29,12 +29,6 @@ def index():
 
     return render_template("report.html", alert_entries=alert_entries, all_entries=all_entries)
 
-@app.route("/detailed")
-def detailed():
-    log_path = "logs/sample_auth.log"
-    detailed_entries = extract_failed_logins_detailed(log_path)
-    return render_template("detailed.html", entries=detailed_entries)
-
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=8080)

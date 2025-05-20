@@ -47,41 +47,6 @@ def extract_failed_logins(log_path):
     return events
 
 
-def extract_failed_logins_detailed(log_path):
-    pattern_invalid = re.compile(r"Failed password for invalid user (\w+) from (\d+\.\d+\.\d+\.\d+)")
-    pattern_valid = re.compile(r"Failed password for user (\w+) from (\d+\.\d+\.\d+\.\d+)")
-
-    entries = []
-
-    with open(log_path, "r") as file:
-        for line_number, line in enumerate(file, start=1):
-            match_invalid = pattern_invalid.search(line)
-            match_valid = pattern_valid.search(line)
-
-            if match_invalid:
-                user, ip = match_invalid.groups()
-                entries.append({
-                    "line_number": line_number,
-                    "ip": ip,
-                    "user": user,
-                    "raw_line": line.strip(),
-                    "alert": False  # Aqui, se quiseres, podes colocar lógica para alerta
-                })
-            elif match_valid:
-                user, ip = match_valid.groups()
-                entries.append({
-                    "line_number": line_number,
-                    "ip": ip,
-                    "user": user,
-                    "raw_line": line.strip(),
-                    "alert": False
-                })
-
-    return entries
-
-
-
-
 #Generating a report of suspicious authentication failures.
 def generate_report(events, output_path, threshold):
     with open(output_path, "w") as report:
