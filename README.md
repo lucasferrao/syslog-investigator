@@ -46,7 +46,7 @@ cd syslog-investigator
 pip install -r requirements.txt
 ```
 
-5. Run the application:
+4. Run the application:
 ```python
 python app.py
 ```
