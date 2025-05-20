@@ -29,9 +29,12 @@ Lightweight Python-based tool designed to parse and analyze Linux system authent
 
 ## Intallation:
 1. Clone the repository:
-
-  - git clone https://github.com/lucasferrao/syslog-investigator.git
-  - cd syslog-investigator
+```text
+git clone https://github.com/lucasferrao/syslog-investigator.git
+```
+```bash
+cd syslog-investigator
+```
     
 2. Create and activate a virtual environment:
    - python3 -m venv venv
@@ -39,10 +42,14 @@ Lightweight Python-based tool designed to parse and analyze Linux system authent
    - venv\Scripts\activate.bat       # Windows
 
 3. Install required packages:
-   - pip install -r requirements.txt
+```python
+pip install -r requirements.txt
+```
 
-4. Run the application:
-   - python app.py
+5. Run the application:
+   ```python
+    python app.py
+    ```
 
 
 ## Web Dashboard
@@ -53,7 +60,7 @@ Lightweight Python-based tool designed to parse and analyze Linux system authent
 
 ## Testing
 ```python
-  python -m unittest discover tests
+python -m unittest discover tests
 ```
 
 
