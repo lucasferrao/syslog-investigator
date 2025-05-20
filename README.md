@@ -47,10 +47,9 @@ pip install -r requirements.txt
 ```
 
 5. Run the application:
-   ```python
-    python app.py
-    ```
-
+```python
+python app.py
+```
 
 ## Web Dashboard
   - Alerts Table: Lists all IP/user entries with failed attempts exceeding the alert threshold;
@@ -65,8 +64,7 @@ python -m unittest discover tests
 
 
 ## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+  - [MIT](https://choosealicense.com/licenses/mit/)
 
 
 ## Authors
