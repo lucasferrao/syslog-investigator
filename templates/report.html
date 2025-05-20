@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Suspicious Authentication Failures</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; background: #f5f5f5; }
+        table { border-collapse: collapse; width: 100%; background: white; margin-bottom: 2em; }
+        th, td { padding: 8px 12px; border: 1px solid #ddd; text-align: left; }
+        th { background: #333; color: white; }
+        tr.alert { background-color: #ffdddd; }
+        h2 { margin-top: 1.5em; }
+    </style>
+</head>
+<body>
+    <h1>Suspicious Authentication Failures Report</h1>
+
+    <h2>IPs with Alerts</h2>
+    {% if alert_entries %}
+    <table>
+        <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>User</th>
+                <th>Failed Attempts</th>
+                <th>Alert</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in alert_entries %}
+            <tr class="alert">
+                <td>{{ entry.ip }}</td>
+                <td>{{ entry.user }}</td>
+                <td>{{ entry.failed_attempts }}</td>
+                <td>ALERT</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No alert events found.</p>
+    {% endif %}
+
+    <h2>All Entries</h2>
+    {% if all_entries %}
+    <table>
+        <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>User</th>
+                <th>Failed Attempts</th>
+                <th>Alert</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in all_entries %}
+            <tr class="{{ 'alert' if entry.alert else '' }}">
+                <td>{{ entry.ip }}</td>
+                <td>{{ entry.user }}</td>
+                <td>{{ entry.failed_attempts }}</td>
+                <td>{{ 'ALERT' if entry.alert else '' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No entries found.</p>
+    {% endif %}
+
+</body>
+</html>

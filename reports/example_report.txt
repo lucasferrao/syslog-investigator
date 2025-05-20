@@ -1,0 +1,6 @@
+Suspicious Authentication Failures Report:
+==================================================
+
+IP: 10.0.0.3 | User: root | Failed Attempts: 6 ------------------------> [ALERT]
+IP: 192.168.1.10 | User: test | Failed Attempts: 1
+IP: 192.168.1.10 | User: admin | Failed Attempts: 1

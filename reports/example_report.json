@@ -1,0 +1,20 @@
+[
+    {
+        "ip": "10.0.0.3",
+        "user": "root",
+        "failed_attempts": 6,
+        "alert": true
+    },
+    {
+        "ip": "192.168.1.10",
+        "user": "test",
+        "failed_attempts": 1,
+        "alert": false
+    },
+    {
+        "ip": "192.168.1.10",
+        "user": "admin",
+        "failed_attempts": 1,
+        "alert": false
+    }
+]
