@@ -23,7 +23,6 @@ Lightweight Python-based tool designed to parse and analyze Linux system authent
 
 
 ## Project Structure:
-
 <img width="557" alt="Screenshot 2025-05-20 at 19 54 55" src="https://github.com/user-attachments/assets/c6e3733d-5750-4740-89a4-e4f773430523" />
 
 
