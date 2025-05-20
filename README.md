@@ -24,14 +24,14 @@ Lightweight Python-based tool designed to parse and analyze Linux system authent
 
 ## Project Structure:
 
-<pre> ```plaintext syslog-investigator/ ├── app.py # Flask application and report visualization ├── src/ │ └── log_parser.py # Log parsing and report generation script ├── logs/ │ └── sample_auth.log # Sample SSH authentication log file ├── reports/ │ ├── example_report.txt # Generated textual report │ └── example_report.json # Generated JSON report ├── templates/ │ ├── report.html # Main dashboard HTML template │ └── index.html # Optional landing page template ├── tests/ │ └── test_log_parser.py # Unit tests for log parsing ├── requirements.txt # Python dependencies └── README.md # Project documentation ``` </pre>
+```plaintext syslog-investigator/ ├── app.py # Flask application and report visualization ├── src/ │ └── log_parser.py # Log parsing and report generation script ├── logs/ │ └── sample_auth.log # Sample SSH authentication log file ├── reports/ │ ├── example_report.txt # Generated textual report │ └── example_report.json # Generated JSON report ├── templates/ │ ├── report.html # Main dashboard HTML template │ └── index.html # Optional landing page template ├── tests/ │ └── test_log_parser.py # Unit tests for log parsing ├── requirements.txt # Python dependencies └── README.md # Project documentation ``` 
 
 
 ## Intallation:
 
 1. Clone the repository:
 
-  - git clone https://github.com/your-username/syslog-investigator.git
+  - git clone https://github.com/lucasferrao/syslog-investigator.git
   - cd syslog-investigator
     
 2. Create and activate a virtual environment:
