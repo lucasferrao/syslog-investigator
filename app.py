@@ -3,9 +3,11 @@ import re
 import webbrowser
 import threading
 
+
+#Simple Flask web application that generates a report from a log file.
 app = Flask(__name__)
 
-
+#This runs the script as a subprocess and passes the necessary arguments.
 def generate_report():
     cmd = [
         "python3",
@@ -22,6 +24,7 @@ def generate_report():
         print(f"[ERROR] Failed to generate report: {e}")
 
 
+#This function parses the report file and extracts relevant information.
 def parse_report_file(report_path):
     entries = []
     pattern = re.compile(r"IP: (\d+\.\d+\.\d+\.\d+) \| User: (\w+) \| Failed Attempts: (\d+)(.*)")
@@ -38,6 +41,8 @@ def parse_report_file(report_path):
                 })
     return entries
 
+
+#Index route to display the report.
 @app.route("/")
 def index():
     report_path = "reports/example_report.txt"
